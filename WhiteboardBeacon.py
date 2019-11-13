@@ -37,8 +37,7 @@ foundPackets = set()
 
 def verboseOutput(text=""):
     """Verbose output logger."""
-    if args.Verbose:
-        sys.stderr.write(text + "\n")
+    sys.stderr.write(text + "\n")
 
 def encodeUid(uid):
     """UID Encoder."""
@@ -147,7 +146,7 @@ def random_with_N_digits(n):
 def main():
     try:
         while True:
-            code = int(str(random_with_N_digits(8)) + str(000000000000000000000000))
+            code = str(random_with_N_digits(8)) + str(000000000000000000000000)
             advertise(code, Eddystone.uid)
             time.sleep(5000)
     except KeyboardInterrupt:
