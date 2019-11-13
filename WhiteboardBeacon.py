@@ -9,6 +9,11 @@ from pprint import pprint
 from enum import Enum
 from random import randint
 
+if (sys.version_info > (3, 0)):
+    DEVNULL = subprocess.DEVNULL
+else:
+    DEVNULL = open(os.devnull, 'wb')
+
 # The default uid
 defaultUid = "01234567890123456789012345678901"
 
