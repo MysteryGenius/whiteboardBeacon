@@ -153,7 +153,7 @@ def main():
         while True:
             code = str(random_with_N_digits(8)) + "000000000000000000000000"
             advertise(code, Eddystone.uid)
-            time.sleep(5)
+            time.sleep(30)
             stopAdvertising()
     except KeyboardInterrupt:
         stopAdvertising()
