@@ -151,7 +151,7 @@ def main():
     #         time.sleep(5000)
     # except KeyboardInterrupt:
     #     stopAdvertising()
-        code = hex(str(random_with_N_digits(8)) + "000000000000000000000000")
+        code = str(random_with_N_digits(8)) + "000000000000000000000000"
         print(code)
     
 
