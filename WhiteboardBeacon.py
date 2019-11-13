@@ -154,6 +154,7 @@ def main():
             code = str(random_with_N_digits(8)) + "000000000000000000000000"
             advertise(code, Eddystone.uid)
             time.sleep(5000)
+            stopAdvertising()
     except KeyboardInterrupt:
         stopAdvertising()
     
