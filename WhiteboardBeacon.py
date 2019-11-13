@@ -144,15 +144,13 @@ def random_with_N_digits(n):
     return randint(range_start, range_end)
 
 def main():
-    # try:
-    #     while True:
-    #         code = hex(str(random_with_N_digits(8)) + "000000000000000000000000")
-    #         advertise(code, Eddystone.uid)
-    #         time.sleep(5000)
-    # except KeyboardInterrupt:
-    #     stopAdvertising()
-        code = str(random_with_N_digits(8)) + "000000000000000000000000"
-        print(code)
+    try:
+        while True:
+            code = str(random_with_N_digits(8)) + "000000000000000000000000"
+            advertise(code, Eddystone.uid)
+            time.sleep(5000)
+    except KeyboardInterrupt:
+        stopAdvertising()
     
 
 
